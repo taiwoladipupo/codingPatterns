@@ -27,7 +27,8 @@ public class LongestSubStringWithDistinctChars {
             map.put(rightChar, map.getOrDefault(rightChar, 0) + 1);
             //update the windowStart
             if (map.get(rightChar) > 1)
-                windowStart = Math.max(windowStart, map.get(rightChar)  + 1);
+                windowStart = Math.max(windowStart, map.get(rightChar) + 1  );
+
             //then we will keep track of the maxLengthFound so far
             //update the maxLength
             maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
